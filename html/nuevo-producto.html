@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/bases.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/agregar-producto.css" />
+</head>
+
+<body class="container login__container">
+    <header class="header">
+        <a href="../index.html"><img class="header__img" src="../img/Logo.png" alt="" /></a>
+        <div class="header__div-icon">
+            <input class="header__input" type="text" placeholder="¿Que desea buscar?"/>
+            <span class="header__icon" id="icon-buscar">
+                <img src="../img/buscar.svg" alt="buscar" />
+            </span>
+        </div>
+        <form action="../html/login.html">
+            <button  class="header__button">Login</button>
+        </form>
+    </header>
+
+    <section class="agregar-producto">
+        <div class="agregar-producto__container">
+            <h1>Agregar nuevo producto</h1>
+
+            <form data-form>
+                <div class="agregar-producto__div-arrastre">
+                    <div class="agregar-producto__arrastre">
+                        <img class="icon-img" src="../img/icon-img.svg" width="32px" height="32px" alt="" />
+                        <!-- imagen para mobile -->
+                        <img class="icon-plus" src="../img/plus.svg" width="32px" height="32px" alt="" />
+                        <p class="p-img">
+                            Arrastre para agregar una imagen para el producto
+                        </p>
+                        <!-- text para mobile -->
+                        <p class="p-plus">Agregar una imagen para el producto</p>
+                        <input type="file" name="image" id="input-file" hidden multiple />
+                    </div>
+                    <span id="agregar-producto-text">o</span>
+                    <button id="boton-buscar">Buscar en la pc</button>
+                </div>
+                <div id="preview"></div>
+
+                <!-- <div>
+                    <input type="text" name="input-validacion__dragAndDrop" id="input-validacion__dragAndDrop" hidden  data-tipo="inputDragAndDrop"/>  -->
+                <!-- input que sirve parav alidar si ingreso o no fotos del producto -->
+                <!-- <span class="input-message-error">Este campo no es valido</span>
+                </div> -->
+                <div>
+                    <label for="nombre"></label>
+                    <input class="agregar-producto__nombre" type="text" name="nombre" id="nombre"
+                        placeholder="Nombre del producto" data-tipo="nombreProducto" required pattern="[\s\S]{1,20}" />
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <div>
+                    <label for="precio"></label>
+                    <input class="agregar-producto__precio" type="number" name="precio" id="precio"
+                        placeholder="Precio del producto" required/ data-tipo="precio">
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <div class="agregar-producto__categoria">
+                    <label for="categoria">Seleccione la categoria</label>
+                    <select name="categoria" id="categoria" placeholder="Precio del producto" required
+                        data-tipo="categoria">
+                        <option value="star wars">Star Wars</option>
+                        <option value="consolas">Consolas</option>
+                        <option value="diversos">Diversos</option>
+                    </select>
+                </div>
+                <div class="agregar-producto__textarea">
+                    <textarea name="descripcion" id="textarea" cols="10" rows="3" placeholder="Descripción del Producto"
+                        class="textArea" required maxlength="120"></textarea>
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <button type="submit" class="agregar-producto__boton enviar-mensaje-form">
+                    Agregar producto
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <aside class="contact">
+        <div class="contact__container">
+            <div class="contact__img-descripcion">
+                <a href="../index.html" class="contact__img" ><img class="contact__img"  src="../img/Logo.png" alt="" /></a>
+                <div class="contact__descripcion">
+                    <p>Quienes Somos</p>
+                    <p>Política de Privacidad</p>
+                    <p>Programa de Fidelidad</p>
+                    <p>Nuestras Tiendas</p>
+                    <p>Quiero ser franquiciado</p>
+                    <p>Anuncie Aquí</p>
+                </div>
+            </div>
+
+            <div class="contact__form">
+                <h1>Hable con nosotros</h1>
+                <div class="contact__form-nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </div>
+
+                <textarea name="texto" id="" cols="20" rows="5  " placeholder="Escribe tu mensaje"></textarea>
+                <button>Enviar Mensaje</button>
+            </div>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <h1>
+            Desarrolado por Marcos Colque <br />
+            2022
+        </h1>
+    </footer>
+    <!-- script uuid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/validaciones/app.js" type="module"></script>
+    <script src="../controllers/nuevo_producto.controller.js" type="module"></script>
+    <script type="module" src="../controllers/buscar-product.js"></script>
+
+</body>
+
+</html>

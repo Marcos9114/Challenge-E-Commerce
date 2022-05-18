@@ -1,0 +1,83 @@
+.banner {
+  grid-row: 2 / 3;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url(../img/banner-imagen.png) center / cover no-repeat;
+
+  display: grid;
+  grid-template-columns: 10vw 80vw 10vw;
+  justify-items: start;
+  align-items: end;
+}
+
+.banner div {
+  grid-column: 2 / 3;
+  padding-bottom: 36px;
+  max-height: 352px;
+  padding-top: 15vw;
+}
+
+.banner div h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.banner div p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.banner__button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #2a7ae4;
+  box-sizing: content-box;
+  width: 15vw;
+  height: 3vw;
+  min-height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.banner__button:hover{
+  color: #ffffff;
+  background-color: #95bef5;
+}
+
+.banner__button:active{
+  color: #ffffff;
+  background-color: #0f3b74;
+  border: solid 2px #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    grid-template-columns: 5vw 90vw 5vw;
+    
+  }
+  .banner__button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner div h1 {
+    font-size: 22px;
+    padding-bottom: 0.5rem;
+  }
+  .banner div p {
+    font-size: 14px;
+    padding-bottom: 0.5rem;
+  }
+  .banner__button {
+    width: 25vw;
+  }
+  .banner div {
+    padding-bottom: 5vw;
+  }
+}

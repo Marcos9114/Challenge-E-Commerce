@@ -1,0 +1,217 @@
+.list-card__container {
+  background-color: #e5e5e5;
+  grid-row: 3 / 4;
+  padding-bottom: 3vw;
+  display: grid;
+  grid-template-columns: 10vw 80vw 10vw;
+}
+
+.list-card {
+  grid-column: 2 / 3;
+}
+
+.list-card__StarWars,
+.list_card__consolas,
+.list-card__diversos {
+  display: grid;
+  grid-template-columns: repeat(6,
+      12.5vw);
+  /* el total del width = 80vw, le resto los 5 grip-gap(5x1vw) y lo divido 6 (6columns) */
+  grid-gap: 1vw;
+  grid-template-rows: 70px auto;
+  box-sizing: border-box;
+  padding: 2vw 0;
+}
+
+.list-card__title {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #464646;
+}
+
+.list-card__title h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.list-card__title a {
+  color: #2a7ae4;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-card__title a img {
+  width: 1rem;
+  height: 1rem;
+  padding-left: 12px;
+}
+
+.list-card__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.list-card__card a{
+  margin: 0px;
+  text-decoration: none;
+  justify-content: flex-start;
+}
+
+.list-card__card img {
+  height: 10vw;
+  width: 10vw;
+  object-fit: cover;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list-card__card img:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: all .5s ease-in-out;
+}
+
+
+.list-card__card:hover {
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+
+.list-card__card h1 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #464646;
+  padding: 8px 0 0 0;
+  margin: 0;
+  height: 40px;
+}
+
+.list-card__card h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #464646;
+  padding: 8px 0;
+  margin: 0;
+  text-align: start;
+}
+
+/* .list-card__card a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2a7ae4;
+  padding: 8px 0 0 0;
+  margin: 0;
+  text-decoration: none;
+} */
+
+.list-card__editar, .list-card__eliminar {
+  font-size: 0.9rem;
+  width: 10vw;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgb(50, 178, 50);
+  border-radius: 10px;
+  border: none;
+  padding: 4px 0;
+  margin: 2px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.list-card__eliminar {
+  background-color: red;
+  margin-bottom: 25px;
+}
+
+.list-card__editar:hover, .list-card__eliminar:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all .5s ease-in-out;
+}
+
+.list-card__editar:active, .list-card__eliminar:active {
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .list-card__container {
+    grid-template-columns: 5vw 90vw 5vw;
+  }
+
+  .list-card__StarWars, .list_card__consolas, .list-card__diversos {
+    grid-template-columns: repeat(4, 21.75vw);
+    /* el total del width = 80vw, le resto los 5 grip-gap(5x1vw) y lo divido 6 (6columns) */
+    grid-gap: 1vw;
+  }
+
+  .list-card__card img {
+    height: 17vw;
+    width: 17vw;
+  }
+
+  .list-card__card h1 {
+    font-size: 0.7rem;
+  }
+
+  .list-card__card h2 {
+    font-size: 0.8rem;
+  }
+
+  .list-card__StarWars .list-card__card:nth-child(+n+6),
+  .list_card__consolas .list-card__card:nth-child(+n+6),
+  .list-card__diversos .list-card__card:nth-child(+n+6) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .list-card__title h1 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .list-card__title a {
+    font-size: 14px;
+  }
+
+  .list-card__title a img {
+    width: 14px;
+    height: 14px;
+    padding-left: 6px;
+  }
+  .list-card__card img {
+      height: 35vw;
+      width: 35vw;
+  }
+
+  .list-card__card h1 {
+    font-size: 14px;
+  }
+
+  .list-card__card a {
+    font-size: 14px;
+  }
+
+  .list-card__StarWars, .list_card__consolas, .list-card__diversos {
+    grid-template-columns: repeat(2, 44.5vw);
+    /* el total del width = 80vw, le resto los 5 grip-gap(5x1vw) y lo divido 6 (6columns) */
+    grid-gap: 1vw;
+  }
+}

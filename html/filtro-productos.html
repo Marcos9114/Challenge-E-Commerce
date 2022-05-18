@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/bases.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/list-card.css" />
+    <link rel="stylesheet" href="../css/productos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="../index.html"><img class="header__img" src="../img/Logo.png" alt="" /></a>
+            <div class="header__div-icon">
+                <input class="header__input" type="text" placeholder="¿Que desea buscar?" />
+                <span class="header__icon" id="icon-buscar">
+                    <img src="../img/buscar.svg" alt="buscar" />
+                </span>
+            </div>
+            <form action="login.html">
+                <button class="header__button">Login</button>
+            </form>
+        </header>
+
+
+
+        <section class="list-card__container">
+            
+            <div class="list-card">
+                <div class="list-card__StarWars productos__modificacion-grid" id="listaProductos" data-list-card>
+                    <div class="list-card__title" id="productos__titulo">
+                        <h1>Productos Encontrados</h1>
+                        <form action="nuevo-producto.html">
+                            <button>Agregar producto</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <aside class="contact">
+            <div class="contact__container">
+                <div class="contact__img-descripcion">
+                    <img class="contact__img" src="../img/Logo.png" alt="" />
+                    <div class="contact__descripcion">
+                        <p>Quienes Somos</p>
+                        <p>Política de Privacidad</p>
+                        <p>Programa de Fidelidad</p>
+                        <p>Nestras Tiendas</p>
+                        <p>Quiero ser franquiciado</p>
+                        <p>Anuncie Aquí</p>
+                    </div>
+                </div>
+
+                <div class="contact__form">
+                    <h1>Hable con nosotros</h1>
+
+                    <div class="contact__form-nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" />
+                    </div>
+
+                    <textarea name="texto" id="" cols="20" rows="5  " placeholder="Escribe tu mensaje"></textarea>
+                    <button>Enviar Mensaje</button>
+                </div>
+            </div>
+        </aside>
+        <footer class="footer">
+            <h1>
+                Desarrolado por Marcos Colque <br />
+                2022
+            </h1>
+        </footer>
+    </div>
+    <script type="module" src="../controllers/buscar-product.js"></script>
+</body>
+</html>

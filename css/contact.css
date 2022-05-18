@@ -1,0 +1,165 @@
+.contact {
+  grid-row: 4 / 5;
+  background-color: #eaf2fd;
+
+  display: grid;
+  grid-template-columns: 10vw 80vw 10vw;
+}
+
+.contact__container {
+  grid-column: 2 / 3;
+  padding-bottom: 2vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 0;
+}
+
+.contact__img-descripcion {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.contact__img {
+  margin: auto 0;
+  width: calc(160px - 3rem);
+}
+
+.contact__descripcion {
+  font-size: 1rem;
+  color: #464646;
+  padding: 0 5vw;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: calc(13vw * 3);
+  color: #464646;
+}
+
+.contact__form h1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.contact__form-nombre {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 75%);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.contact__form-nombre label {
+  font-size: 12px;
+  color: #a2a2a2;
+  padding: 8px 12px 0 12px;
+}
+
+.contact__form-nombre input {
+  font-size: 16px;
+  color: black;
+  padding: 0px 12px 8px 12px;
+  border: none;
+  outline: none;
+}
+
+.contact__form textarea {
+  padding: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 75%);
+  margin-bottom: 10px;
+}
+
+.contact__form textarea::placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  color: #a2a2a2;
+}
+
+.contact__form button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #2a7ae4;
+  border: none;
+  box-sizing: content-box;
+  width: 15vw;
+  height: 3vw;
+  min-height: 40px;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+
+.contact__form button:hover{
+  color: #ffffff;
+  background-color: #95bef5;
+}
+
+.contact__form button:active{
+  color: #ffffff;
+  background-color: #0f3b74;
+  border: solid 2px #ffffff;
+}
+
+
+.input-message-error {
+  display: none;
+}
+
+.input-container--invalid .input-message-error {
+  color: red;
+  display: block;
+  font-size: 12px;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    grid-template-columns: 5vw 90vw 5vw;
+  }
+  .contact__img-descripcion {
+    flex-direction: column;
+  }
+  .contact__descripcion {
+    padding: 0;
+  }
+  .contact__form {
+    width: calc(19vw * 3);
+  }
+  .contact__form button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__img-descripcion {
+    flex-direction: column;
+  }
+  .contact__img {
+    margin: auto 0;
+    width: 150px;
+  }
+  .contact__descripcion {
+    text-align: center;
+  }
+  .contact__form {
+    width: 100%;
+  }
+  .contact__form button {
+      font-size:14px;
+      width: 40vw;
+  }
+}

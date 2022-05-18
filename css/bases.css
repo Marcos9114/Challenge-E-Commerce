@@ -1,0 +1,14 @@
+/* container de index.html */
+.container {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login__container{
+  display: block;
+}
